@@ -419,6 +419,7 @@ var ogreHurt;
 var ogreAttackAnim;
 var canAttack = true;
 const buttons = document.querySelectorAll(".st");
+var playersprite = document.getElementById("playersprite");
 
 function playerTurn() {
   buttons.forEach(function (button) {
@@ -433,10 +434,10 @@ function playerTurn() {
     repeat: 2,
     ease: Linear.easeNone,
     onUpdate: function () {
-      $("#playersprite").attr("src", images[obj.curImg]);
+      playersprite.src = images[obj.curImg];
     },
     onComplete: function () {
-      $("#playersprite").attr("src", "sword.png");
+      playersprite.src = "sword.png";
     }
   }); 
 
