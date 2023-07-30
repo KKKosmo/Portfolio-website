@@ -44,7 +44,7 @@ body {
   height: 22%;
   width: 35%;
   font-size: 6em;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: gill sans, sans-serif;
   text-align: center;
 }
 
@@ -682,7 +682,7 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: gill sans, sans-serif;
 }
 
 .aboutmeFont1 {
@@ -862,7 +862,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: gill sans, sans-serif;
 }
 
 #submit {
