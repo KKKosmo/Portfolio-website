@@ -596,6 +596,7 @@ body {
 
   .div1 {
     grid-area: 1 / 1 / 2 / 2;
+    font-size: 4vw;
   }
 
   .div2 {
