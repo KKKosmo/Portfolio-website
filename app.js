@@ -743,7 +743,7 @@ function gameover(win){
   dialogue.style.border = '0.5vw solid #000';
   dialogue.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
   dialogue.style.padding = '2%';
-  dialogue.style.zIndex = '9999';
+  dialogue.style.zIndex = '0';
   dialogue.style.fontFamily = "'Brush Script MT', cursive";
 
   if(window.innerWidth < 450){
