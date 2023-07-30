@@ -744,7 +744,7 @@ function gameover(win){
   dialogue.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
   dialogue.style.padding = '2%';
   dialogue.style.zIndex = '0';
-  dialogue.style.fontFamily = "'Brush Script MT', cursive";
+  dialogue.style.fontFamily = "gill sans, sans-serif;";
 
   if(window.innerWidth < 450){
     dialogue.style.fontSize = "1em";
