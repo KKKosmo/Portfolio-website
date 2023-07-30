@@ -45,7 +45,71 @@ const scene1 = new ScrollMagic.Scene({
 
 
 
+
+
+  
+
+
+
+  var playerAttack;
+  var ogreHurt;
+  var ogreAttackAnim;
+  var canAttack = true;
+  const buttons = document.querySelectorAll(".st");
+  var playersprite = document.getElementById("playersprite");
+
+
+
+
+
+
+  const images = [
+    "gun1.png",
+    "gun2.png",
+    "gun1.png",
+    "gun2.png",
+    "gun1.png",
+  ];
+  
+
+  var obj = { curImg: 0 };
+  playerAttack = TweenMax.to(obj, 0.5, {
+    curImg: images.length - 1,
+    roundProps: "curImg",
+    repeat: 2,
+    ease: Linear.easeNone,
+    onUpdate: function () {
+      playersprite.src = images[obj.curImg];
+    },
+    onComplete: function () {
+      playersprite.src = "sword.png";
+    }
+  });
+  
+
+  ogreHurt = new TimelineLite(); 
+  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
+  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
+  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
+  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
+  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
+  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
+  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
+  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
+
+
+
+
+
+
   var battle = new TimelineLite();
+
+  // battle.add(playerAttack);
+
+  battle.add(
+    TweenLite.to("#player", 1.5, {
+    })
+  );
 
   battle.add(
     TweenLite.to("#ogre", 1, {
@@ -58,14 +122,13 @@ const scene1 = new ScrollMagic.Scene({
     TweenLite.to("#player", 1, {
       scaleX: 1, 
       scaleY: 1, 
-    }),
-    0
+    })
   );
 
 	new ScrollMagic.Scene({
     triggerElement: "#skills", 
     duration: 0,
-    triggerHook: 0.2,
+    triggerHook: 0.3,
     reverse: false
   })
     .setTween(battle)
@@ -148,18 +211,6 @@ const scene1 = new ScrollMagic.Scene({
   })
     .setTween(second)
     .addTo(controller);
-
-
-    
-
-
-
-
-
-
-
-
-
 
 
 
@@ -406,20 +457,16 @@ document.querySelectorAll('a.smoothNav').forEach(anchor => {
 
 
 
-var images = [
-  "gun1.png",
-  "gun2.png",
-  "gun1.png",
-  "gun2.png",
-  "gun1.png",
-];
 
-var playerAttack;
-var ogreHurt;
-var ogreAttackAnim;
-var canAttack = true;
-const buttons = document.querySelectorAll(".st");
-var playersprite = document.getElementById("playersprite");
+
+
+
+
+
+
+
+
+
 
 function playerTurn() {
   buttons.forEach(function (button) {
@@ -427,35 +474,30 @@ function playerTurn() {
     button.style.cursor = "not-allowed";
   });
 
-  var obj = { curImg: 0 };
-  playerAttack = TweenMax.to(obj, 0.5, {
-    curImg: images.length - 1,
-    roundProps: "curImg",
-    repeat: 2,
-    ease: Linear.easeNone,
-    onUpdate: function () {
-      playersprite.src = images[obj.curImg];
-    },
-    onComplete: function () {
-      playersprite.src = "sword.png";
-    }
-  }); 
+  // var obj = { curImg: 0 };
+  // playerAttack = TweenMax.to(obj, 0.5, {
+  //   curImg: images.length - 1,
+  //   roundProps: "curImg",
+  //   repeat: 2,
+  //   ease: Linear.easeNone,
+  //   onUpdate: function () {
+  //     playersprite.src = images[obj.curImg];
+  //   },
+  //   onComplete: function () {
+  //     playersprite.src = "sword.png";
+  //   }
+  // });
 
 
-  ogreHurt = new TimelineLite(); 
-  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
-  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
-  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
-  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
-  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
-  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
-  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
-  ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
-
-
-
-
-
+  // ogreHurt = new TimelineLite(); 
+  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
+  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
+  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
+  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
+  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
+  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
+  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
+  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
 }
 
 
