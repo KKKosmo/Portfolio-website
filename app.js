@@ -805,7 +805,7 @@ submit.addEventListener('submit', (e) => {
       From: "manilalouisangel2@gmail.com", 
       To: "manilalouisangel2@gmail.com",
       Subject: "Email from website portfolio",
-      Body: email.name + " <br> " + email.body + " <br>Copy = " + sendCopyToSender
+      Body: "E-mail: " + email.to + " <br> " + "Name: " + email.name + " <br> " + email.body + " <br>Copy = " + sendCopyToSender
     })
   );
 
