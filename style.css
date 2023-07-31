@@ -598,6 +598,9 @@ body {
     grid-area: 1 / 1 / 2 / 2;
     font-size: 4vw;
   }
+  .div1 h2{
+    margin-top: 10%;
+  }
 
   .div2 {
     grid-area: 2 / 1 / 3 / 2;
