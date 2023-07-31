@@ -1,26 +1,26 @@
 const first = new TimelineLite();
 
 first.add(
-  TweenLite.to(".gear", 2.5, {
+  TweenLite.to(".gear", 0.5, {
     rotation: 90,
     ease: Power1.easeInOut
   })
 );
 first.add(
-    TweenLite.to(".gear2", 2.5, {
+    TweenLite.to(".gear2", 0.5, {
       rotation: -180,
       ease: Power1.easeInOut
     }), 0 
   );
 first.add(
-  TweenLite.to(".gear3", 2.5, {
+  TweenLite.to(".gear3", 0.5, {
     rotation: 360,
     ease: Power1.easeInOut
   }), 0 
 );
 
 first.add(
-  TweenLite.to(".topBackground", 2.5, {
+  TweenLite.to(".topBackground", 0.5, {
     bezier: {values: [{x: 0, yPercent: -30}]},
     filter: "brightness(0.8)",
   }), 0
