@@ -863,6 +863,16 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 768px) {
+  #title {
+    font-size: 7vw;
+  }
+  
+  #title2 {
+    font-size: 8vw;
+  }
+}
+
 
 .contact {
   height: 100vh;
