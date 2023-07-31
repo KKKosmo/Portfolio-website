@@ -36,7 +36,7 @@ const controller = new ScrollMagic.Controller();
 
 const scene1 = new ScrollMagic.Scene({
   triggerElement: "#top",
-  duration: 1000,
+  duration: 500,
   triggerHook: 0
 })
   .setTween(first)
