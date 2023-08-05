@@ -104,10 +104,10 @@ const scene1 = new ScrollMagic.Scene({
 
   var battle = new TimelineLite();
 
-  // battle.add(playerAttack);
 
   battle.add(
     TweenLite.to("#player", 1.5, {
+	    //give some time to preload animation
     })
   );
 
@@ -473,31 +473,6 @@ function playerTurn() {
     button.disabled = true;
     button.style.cursor = "not-allowed";
   });
-
-  // var obj = { curImg: 0 };
-  // playerAttack = TweenMax.to(obj, 0.5, {
-  //   curImg: images.length - 1,
-  //   roundProps: "curImg",
-  //   repeat: 2,
-  //   ease: Linear.easeNone,
-  //   onUpdate: function () {
-  //     playersprite.src = images[obj.curImg];
-  //   },
-  //   onComplete: function () {
-  //     playersprite.src = "sword.png";
-  //   }
-  // });
-
-
-  // ogreHurt = new TimelineLite(); 
-  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
-  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
-  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
-  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
-  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
-  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
-  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(300%)" }));
-  // ogreHurt.add(TweenLite.to("#ogresprite", 0.2, { filter: "brightness(100%)" }));
 }
 
 
@@ -797,8 +772,8 @@ submit.addEventListener('submit', (e) => {
   };
   const sendCopyToSender = formData.get('sendCopy');
 
+//to have different prompts for different situations, e.g copy and original sent successfuly, or just 1, or none
   const promises = [];
-
   promises.push(
     Email.send({
       SecureToken: "125cca7f-c2cc-4ea1-9d5e-f4de5b721c34", 
