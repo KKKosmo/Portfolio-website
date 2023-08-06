@@ -122,7 +122,7 @@ const scene1 = new ScrollMagic.Scene({
     TweenLite.to("#player", 1, {
       scaleX: 1, 
       scaleY: 1, 
-    }), 0
+    })
   );
 
 	new ScrollMagic.Scene({
