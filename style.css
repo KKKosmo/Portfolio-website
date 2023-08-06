@@ -369,6 +369,17 @@ body {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 850px) {
+  .bar {
+    width: 20vw;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .bar {
+    width: 30vw;
+  }
+}
+
 .fill {
   height: 100%;
   transition: width 1.5s;
