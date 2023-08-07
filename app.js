@@ -468,13 +468,6 @@ document.querySelectorAll('a.smoothNav').forEach(anchor => {
 
 
 
-function playerTurn() {
-  buttons.forEach(function (button) {
-    button.disabled = true;
-    button.style.cursor = "not-allowed";
-  });
-}
-
 
 
 
@@ -510,50 +503,55 @@ function playPlayerAnim(dmg){
 function handleButtonClick(buttonNumber) {
   if(canAttack){
     canAttack = false;
-    if (!playerAttack) {
-      playerTurn();
+
+	  
+    buttons.forEach(function (button) {
+      button.disabled = true;
+      button.style.cursor = "not-allowed";
+    });
+
+
+    switch (buttonNumber) {
+      case 1:
+      playPlayerAnim(45);
+      break;
+    case 2:
+      playPlayerAnim(45);
+      break;
+    case 3:
+      playPlayerAnim(45);
+      break;
+    case 4:
+      playPlayerAnim(45);
+      break;
+    case 5:
+      playPlayerAnim(45);
+      break;
+    case 6:
+      playPlayerAnim(35);
+      break;
+    case 7:
+      playPlayerAnim(30);
+      break;
+    case 8:
+      playPlayerAnim(25);
+      break;
+    case 9:
+      playPlayerAnim(20);
+      break;
+    case 10:
+      playPlayerAnim(15);
+      break;
+    case 11:
+      playPlayerAnim(10);
+      break;
+    case 12:
+      playPlayerAnim(5);
+      break;
+    default:
+      console.log("Unknown button clicked!");
+      break;
     }
-      switch (buttonNumber) {
-        case 1:
-        playPlayerAnim(45);
-        break;
-      case 2:
-        playPlayerAnim(45);
-        break;
-      case 3:
-        playPlayerAnim(45);
-        break;
-      case 4:
-        playPlayerAnim(45);
-        break;
-      case 5:
-        playPlayerAnim(45);
-        break;
-      case 6:
-        playPlayerAnim(35);
-        break;
-      case 7:
-        playPlayerAnim(30);
-        break;
-      case 8:
-        playPlayerAnim(25);
-        break;
-      case 9:
-        playPlayerAnim(20);
-        break;
-      case 10:
-        playPlayerAnim(15);
-        break;
-      case 11:
-        playPlayerAnim(10);
-        break;
-      case 12:
-        playPlayerAnim(5);
-        break;
-      default:
-        console.log("Unknown button clicked!");
-        break;
-      }
     playerAttack.restart();
     ogreHurt.restart();
   }
