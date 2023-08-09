@@ -1,47 +1,86 @@
+const controller = new ScrollMagic.Controller();
 const first = new TimelineLite();
 
-first.add(
-  TweenLite.to(".gear", 0.35, {
-    rotation: 90,
-    ease: Power1.easeInOut
-  })
-);
-first.add(
-    TweenLite.to(".gear2", 0.35, {
-      rotation: -180,
+
+
+if(window.innerWidth > 768){
+  // console.log("NOT MOBILE");
+  first.add(
+    TweenLite.to(".gear", 0.70, {
+      rotation: 90,
+      ease: Power1.easeInOut
+    })
+  );
+  first.add(
+      TweenLite.to(".gear2", 0.70, {
+        rotation: -180,
+        ease: Power1.easeInOut
+      }), 0 
+    );
+  first.add(
+    TweenLite.to(".gear3", 0.70, {
+      rotation: 360,
       ease: Power1.easeInOut
     }), 0 
   );
-first.add(
-  TweenLite.to(".gear3", 0.35, {
-    rotation: 360,
-    ease: Power1.easeInOut
-  }), 0 
-);
+  
+  first.add(
+    TweenLite.to(".topBackground", 0.70, {
+      bezier: {values: [{x: 0, yPercent: -30}]},
+      filter: "brightness(0.8)",
+    }), 0
+  );  
+  const scene1 = new ScrollMagic.Scene({
+    triggerElement: "#top",
+    duration: 700,
+    triggerHook: 0
+  })
+    .setTween(first)
+    .setPin("#top")
+    .addTo(controller);
+}
+else{
+  // console.log("MOBILE");
+  first.add(
+    TweenLite.to(".gear", 0.35, {
+      rotation: 90,
+      ease: Power1.easeInOut
+    })
+  );
+  first.add(
+      TweenLite.to(".gear2", 0.35, {
+        rotation: -180,
+        ease: Power1.easeInOut
+      }), 0 
+    );
+  first.add(
+    TweenLite.to(".gear3", 0.35, {
+      rotation: 360,
+      ease: Power1.easeInOut
+    }), 0 
+  );
+  
+  first.add(
+    TweenLite.to(".topBackground", 0.35, {
+      bezier: {values: [{x: 0, yPercent: -30}]},
+      filter: "brightness(0.8)",
+    }), 0
+  );
+  
+  const scene1 = new ScrollMagic.Scene({
+    triggerElement: "#top",
+    duration: 350,
+    triggerHook: 0
+  })
+    .setTween(first)
+    .setPin("#top")
+    .addTo(controller);
+}
 
-first.add(
-  TweenLite.to(".topBackground", 0.35, {
-    bezier: {values: [{x: 0, yPercent: -30}]},
-    filter: "brightness(0.8)",
-  }), 0
-);
 
 
 
 
-
-
-
-const controller = new ScrollMagic.Controller();
-
-const scene1 = new ScrollMagic.Scene({
-  triggerElement: "#top",
-  duration: 350,
-  triggerHook: 0
-})
-  .setTween(first)
-  .setPin("#top")
-  .addTo(controller);
 
 
 
