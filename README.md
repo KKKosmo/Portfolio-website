@@ -1,5 +1,7 @@
 # Portfolio-website
 
+Or you could call it my personal website, it also acts as a resume.
+
 GSAP and scrollmagic are used for the animations
 
 smtp.js is used for emails
