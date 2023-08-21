@@ -567,22 +567,22 @@ function handleButtonClick(buttonNumber) {
       playPlayerAnim(45);
       break;
     case 6:
-      playPlayerAnim(35);
+      playPlayerAnim(45);
       break;
     case 7:
-      playPlayerAnim(30);
+      playPlayerAnim(45);
       break;
     case 8:
       playPlayerAnim(25);
       break;
     case 9:
-      playPlayerAnim(20);
+      playPlayerAnim(25);
       break;
     case 10:
-      playPlayerAnim(15);
+      playPlayerAnim(25);
       break;
     case 11:
-      playPlayerAnim(10);
+      playPlayerAnim(25);
       break;
     case 12:
       playPlayerAnim(5);
