@@ -576,13 +576,13 @@ function handleButtonClick(buttonNumber) {
       playPlayerAnim(25);
       break;
     case 9:
-      playPlayerAnim(25);
+      playPlayerAnim(20);
       break;
     case 10:
-      playPlayerAnim(25);
+      playPlayerAnim(15);
       break;
     case 11:
-      playPlayerAnim(25);
+      playPlayerAnim(10);
       break;
     case 12:
       playPlayerAnim(5);
